@@ -13,4 +13,16 @@ public class Table implements Element{
 		System.out.println(title);
 	}
 	
+	public void add(Element e) {
+		
+	}
+	
+	public Element get(int p) {
+		return null;
+	}
+	
+	public void remove(Element e) {
+		
+	}
+	
 }

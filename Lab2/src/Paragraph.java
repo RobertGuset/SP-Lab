@@ -11,4 +11,18 @@ public class Paragraph implements Element{
 	public void print() {
 		System.out.println(text);
 	}
+	
+	public void add(Element e) {
+
+    }
+	
+    public void remove(Element e) {
+
+    }
+
+    public Element get(int position) {
+        return null;
+    }
+
+	
 }

@@ -6,31 +6,31 @@ import java.util.List;
 public class Book {
 	
 	private String title;
-	private TableOfContents tableOfContents;
 	private List<Author> authorsList = new ArrayList<>();
-	private List<Chapter> chapterList = new ArrayList<>();
+	private List<Element> sectionsList = new ArrayList<>();
 	
 	Book(String title){
 		this.title = title;
 	}
 	
-	public void addAuthor(Author author) {
-		authorsList.add(author);
+	public void addAuthor(Author a) {
+		this.authorsList.add(a);
 	}
 	
-	public int createChapter(String title) {
-		Chapter chapter = new Chapter(title);
-		chapterList.add(chapter);
-		return chapterList.indexOf(chapter);
+	public void addContent(Element e) {
+		this.sectionsList.add(e);
 	}
 	
-	public Chapter getChapter(int index) {
-		return chapterList.get(index);
+	public void print() {
+		System.out.println(title);
+		this.authorsList.forEach(a ->{
+			a.print();
+		});
+		
+		this.sectionsList.forEach(s->{
+			s.print();
+		});
 	}
-	public String toString() {
-		return title;
-	}
-	
 	
 	
 }

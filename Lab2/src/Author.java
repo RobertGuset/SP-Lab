@@ -7,7 +7,7 @@ public class Author {
 		this.name = name;
 	}
 	
-	public String toString() {
-		return name;
+	public void print() {
+		System.out.println("Author: " + this.name);
 	}
 }
