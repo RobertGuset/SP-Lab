@@ -8,6 +8,11 @@ public class Paragraph implements Element{
 		this.text = text;
 	}
 	
+	public void setAlignStrategy(AlignStrategy as) {
+	   as.render(this.text);
+	    
+	}
+	
 	public void print() {
 		System.out.println(text);
 	}
@@ -23,6 +28,4 @@ public class Paragraph implements Element{
     public Element get(int position) {
         return null;
     }
-
-	
 }
