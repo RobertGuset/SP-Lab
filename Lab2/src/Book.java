@@ -3,14 +3,15 @@ import java.util.List;
 
 
 
-public class Book {
+public class Book extends Section{
 	
 	private String title;
 	private List<Author> authorsList = new ArrayList<>();
 	private List<Element> sectionsList = new ArrayList<>();
+	private ArrayList<Element> content = new ArrayList<>();
 	
 	Book(String title){
-		this.title = title;
+		super(title);
 	}
 	
 	public void addAuthor(Author a) {
@@ -31,6 +32,17 @@ public class Book {
 			s.print();
 		});
 	}
-	
+
+	public ArrayList<Element> getContent() {
+		return content;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public  List<Author> getAuthors() {
+		return authorsList;
+	}
 	
 }
